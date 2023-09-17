@@ -122,8 +122,9 @@ outputs:
     - RSS
     - JSON
 
+# add comments https://utteranc.es/
 # analytics, SEO
-# add comments utteranc.es
-# switch syntax highlighting color
 # linkedin share button broken?
-# remove old submodule, old toml file
+# switch syntax highlighting color
+# Reference: https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/
+#            https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
