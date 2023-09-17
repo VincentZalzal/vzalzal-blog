@@ -1,0 +1,129 @@
+baseURL: "https://vzalzal.com/"
+title: "vzalzal's coding blog"
+paginate: 8
+theme: PaperMod
+
+
+enableRobotsTXT: true
+#googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: "vzalzal's coding blog"
+  description: "A #pragma-tist's view on C++ software development"
+  keywords: ["C++", blog]
+  author: "Vincent Zalzal"
+  # author: ["Me", "You"] # multiple authors
+  images: ["android-chrome-512x512.png"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: false
+  ShowShareButtons: true
+  ShareButtons: ["linkedin", "twitter", "reddit"]
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    disableHLJS: true # to disable highlight.js, use built-in server-side Chroma
+    disableFingerprinting: true
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # home-info mode
+  homeInfoParams:
+    Title: "vzalzal's coding blog"
+    Content: "A #pragma-tist's view on C++ software development"
+
+  socialIcons:
+    - name: rss
+      url: '/posts/index.xml'
+    - name: email
+      url: 'mailto:vzalzal@vzalzal.com'
+    - name: linkedin
+      url: 'https://www.linkedin.com/in/vincentzalzal/'
+    - name: github
+      url: 'https://github.com/VincentZalzal'
+    - name: twitter
+      url: 'https://twitter.com/Vincent4096'
+  
+  #analytics:
+  #  google:
+  #    SiteVerificationTag: "XYZabc"
+  #  bing:
+  #    SiteVerificationTag: "XYZabc"
+  #  yandex:
+  #    SiteVerificationTag: "XYZabc"
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - name: Search
+      pageRef: /search
+      weight: 10
+    - name: Tags
+      pageRef: /tags
+      weight: 20
+    - name: About
+      pageRef: /about
+      weight: 40
+
+taxonomies:
+  tag: tags
+
+markup:
+  highlight:
+    #anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    #hl_Lines: ""
+    #hl_inline: false
+    #lineAnchors: ""
+    #lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    noHl: false
+    style: base16-snazzy
+    tabWidth: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# analytics, SEO
+# add comments utteranc.es
+# switch syntax highlighting color
+# linkedin share button broken?
+# remove old submodule, old toml file
