@@ -122,9 +122,9 @@ outputs:
     - RSS
     - JSON
 
-# add comments https://utteranc.es/
+# disable comments on some pages (e.g. about, hello-world?)
 # analytics, SEO
 # linkedin share button broken?
-# switch syntax highlighting color
+# switch syntax highlighting color, utteranc.es color...
 # Reference: https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/
 #            https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
