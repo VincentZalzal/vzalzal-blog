@@ -1,5 +1,5 @@
 ---
-title: "C++ templates: a language in the language"
+title: "C++ Templates: A Language in the Language"
 date: 2019-09-09T09:06:28-04:00
 tags: [templates, SFINAE, speculative, readability]
 ---

@@ -1,0 +1,24 @@
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const iframe = document.querySelector('.utterances-frame');
+        if (iframe) {
+            const message = {
+                type: 'set-theme',
+                // Inverted, because our callback is called before the theme's one, i.e. before the className changes.
+                theme: document.body.className.includes("dark") ? 'github-light' : 'github-dark'
+            };
+            iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+        }
+    });
+    setTimeout(() => {
+        const iframe = document.querySelector('.utterances-frame');
+        if (iframe) {
+            const message = {
+                type: 'set-theme',
+                theme: document.body.className.includes("dark") ? 'github-dark' : 'github-light'
+            };
+            iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+        }
+    }, 2000);
+
+</script>

@@ -1,6 +1,7 @@
 ---
 title: "Hello, World! Obviously"
 date: 2019-09-08T16:42:00-04:00
+tags: [personal]
 ---
 
 What better way to start a new coding blog than with a "Hello, World!" post :)

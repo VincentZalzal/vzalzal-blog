@@ -1,8 +1,8 @@
-+++
-title = 'Readability of Logical Operators'
-date = 2019-09-13T23:49:21-04:00
-tags = ['readability', 'style', 'operators']
-+++
+---
+title: "Readability of Logical Operators"
+date: 2019-09-13T23:49:21-04:00
+tags: [readability, style, operators]
+---
 
 Operators generally lead to a terse and familiar syntax that usually helps readability. However, this is not always the case. I want to present an alternative here, and I wonder why it isn't used more often.
 

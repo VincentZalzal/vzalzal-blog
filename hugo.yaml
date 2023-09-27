@@ -1,11 +1,11 @@
 baseURL: "https://vzalzal.com/"
 title: "vzalzal's coding blog"
-paginate: 8
+paginate: 10
 theme: PaperMod
 
 
 enableRobotsTXT: true
-#googleAnalytics: UA-123-45
+googleAnalytics: G-2Z62W582S8
 
 minify:
   disableXML: true
@@ -29,7 +29,7 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowWordCount: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: false
   disableSpecial1stPost: false
@@ -111,9 +111,9 @@ markup:
     #lineNoStart: 1
     lineNos: false
     lineNumbersInTable: true
-    noClasses: true
+    noClasses: false
     noHl: false
-    style: base16-snazzy
+    #style: base16-snazzy
     tabWidth: 4
 
 outputs:
@@ -121,10 +121,3 @@ outputs:
     - HTML
     - RSS
     - JSON
-
-# disable comments on some pages (e.g. about, hello-world?)
-# analytics, SEO
-# linkedin share button broken?
-# switch syntax highlighting color, utteranc.es color...
-# Reference: https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-variables/
-#            https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
