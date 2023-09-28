@@ -1,8 +1,20 @@
-<script src="https://utteranc.es/client.js"
-        repo="VincentZalzal/vzalzal-blog"
-        issue-term="title"
-        label="💬 comment"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
+<div id="utterances-placeholder"></div>
+<script>
+        window.onload = () => {
+                const script = document.createElement("script");
+                script.src = "https://utteranc.es/client.js";
+                script.setAttribute("repo", "VincentZalzal/vzalzal-blog");
+                script.setAttribute("issue-term", "title");
+                script.setAttribute("label", "💬 comment");
+                script.crossOrigin = "anonymous";
+                script.async = true;
+
+                if (document.body.className.includes("dark")) {
+                        script.setAttribute("theme", "github-dark");
+                } else {
+                        script.setAttribute("theme", "github-light");
+                }
+
+                document.getElementById('utterances-placeholder').appendChild(script);
+        };
 </script>

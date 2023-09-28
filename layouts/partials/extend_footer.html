@@ -10,15 +10,4 @@
             iframe.contentWindow.postMessage(message, 'https://utteranc.es');
         }
     });
-    setTimeout(() => {
-        const iframe = document.querySelector('.utterances-frame');
-        if (iframe) {
-            const message = {
-                type: 'set-theme',
-                theme: document.body.className.includes("dark") ? 'github-dark' : 'github-light'
-            };
-            iframe.contentWindow.postMessage(message, 'https://utteranc.es');
-        }
-    }, 2000);
-
 </script>
