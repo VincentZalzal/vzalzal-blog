@@ -66,7 +66,8 @@
 /* LiteralNumberOct */ .dark .chroma .mo { color: #ff9f43 }
 /* Operator */ .dark .chroma .o { color: #ff6ac1 }
 /* OperatorWord */ .dark .chroma .ow { color: #ff6ac1 }
-/* Punctuation */ .dark .chroma .p {  }
+/* Punctuation  .chroma .p {  } */
+/* Punctuation */ .dark .chroma .p { color: #e2e4e5 }
 /* Comment */ .dark .chroma .c { color: #78787e }
 /* CommentHashbang */ .dark .chroma .ch { color: #78787e }
 /* CommentMultiline */ .dark .chroma .cm { color: #78787e }
