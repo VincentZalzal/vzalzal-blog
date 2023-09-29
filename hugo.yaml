@@ -36,6 +36,7 @@ params:
   disableScrollToTop: false
   comments: true
   hidemeta: false
+  hideAuthor: true
   hideSummary: false
   showtoc: false
   tocopen: false
@@ -56,7 +57,7 @@ params:
 
   socialIcons:
     - name: rss
-      url: '/posts/index.xml'
+      url: '/index.xml'
     - name: email
       url: 'mailto:vzalzal@vzalzal.com'
     - name: linkedin
