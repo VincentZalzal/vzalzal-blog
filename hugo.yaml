@@ -5,7 +5,6 @@ theme: PaperMod
 
 
 enableRobotsTXT: true
-googleAnalytics: G-2Z62W582S8
 
 minify:
   disableXML: true
