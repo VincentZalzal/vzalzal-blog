@@ -35,11 +35,11 @@ How would you go about implementing support for such a syntax? By overloading bo
 
 ##  The comma operator
 
-This story involves the comma operator, i.e. `operator,`. The first time I've heard about the comma operator was while reading *More Effective C++* from Scott Meyers, and it was to tell me not to overload it. Nevertheless, existing code exists, and you might find some overload of this operator in your codebase too, so it is good to know how the built-in operator works.
+This story involves the comma operator, i.e. `operator,`. The first time I heard about the comma operator was while reading *More Effective C++* by Scott Meyers, and it was to tell me not to overload it. Nevertheless, existing code exists, and you might find some overload of this operator in your codebase too, so it is good to know how the built-in operator works.
 
 The built-in comma operator first evaluates the expression on the left, then the expression on the right, then returns the result of the expression on the right. 
 
-Scott Meyers' reason not to overload `operator,` was related to the guarantee (or lack thereof) on the order of evaluation of the arguments. But in our case here, the problem is different.
+Scott Meyers' reason not to overload `operator,` was related to the guarantee (or lack thereof) on the order of evaluation of the arguments. But in our case, the problem is different.
 
 ## Implementation of the comma initializer
 
@@ -66,7 +66,7 @@ Pretty simple, really. The `Vec4` class provides an `operator<<` that initialize
 
 ## Usage
 
-Since you work a lot with 3d points in [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates), you implement a helper function to create a 3d point along the X axis:
+Since you work a lot with 3D points in [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates), you implement a helper function to create a 3D point along the X axis:
 
 ```cpp
 template <typename T>
@@ -108,9 +108,9 @@ Vec4_f64 vec = point_along_x(safe::f64(1.618)); // [1.618, 0, 0, 0] !!
 
 What is happening here‽ Why is the last coordinate 0 instead of 1? Try and see if you can figure it out.
 
-## A fondamental difference
+## A fundamental difference
 
-There is a fondamental difference between the built-in `operator,` and the other binary operators. Let's compare below:
+There is a fundamental difference between the built-in `operator,` and the other binary operators. Let's compare below:
 
 ```cpp
 struct A {};
@@ -119,7 +119,7 @@ B b1 = A() + B();  // error: no match for 'operator+'
 B b2 = (A(), B()); // compiles!
 ```
 
-**The built-in `operator,` will accept any types without the user having to overload it!**
+**The built-in `operator,` will accept any type without the user having to overload it!**
 
  This means that there is a danger, when you overload `operator,`, that the built-in one gets called instead of your version if the arguments are not exactly right.
 
