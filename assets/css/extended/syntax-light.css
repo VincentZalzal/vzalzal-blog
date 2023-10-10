@@ -4,7 +4,8 @@
 /* PreWrapper */ .chroma { background-color: #ffffff; }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #ff0000 }
-/* CodeLine */ .chroma .cl {  }
+/* CodeLine .chroma .cl {  } */
+/* CodeLine */ .chroma .cl { color: #000000 }
 /* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }

@@ -4,7 +4,8 @@
 /* PreWrapper */ .dark .chroma { color: #e2e4e5; background-color: #282a36; }
 /* Other */ .dark .chroma .x {  }
 /* Error */ .dark .chroma .err { color: #ff5c57 }
-/* CodeLine */ .dark .chroma .cl {  }
+/* CodeLine .dark .chroma .cl {  } */
+/* CodeLine */ .dark .chroma .cl { color: #e2e4e5 }
 /* LineLink */ .dark .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
 /* LineTableTD */ .dark .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
 /* LineTable */ .dark .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
