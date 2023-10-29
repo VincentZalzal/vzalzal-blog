@@ -86,7 +86,7 @@ To copy_to(const From& something) {
 }
 ```
 
-Which allows to write this:
+Which allows me to write this:
 
 ```cpp
 return summarize_values( copy_to<in_t>( compute_values() ) );
