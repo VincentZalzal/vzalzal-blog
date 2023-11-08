@@ -1,6 +1,6 @@
 ---
-title: 'Unique Serial Number'
-date: 2023-11-08T07:26:06-04:00
+title: 'A Detour into Group Theory'
+date: 2023-11-07T20:04:06-04:00
 tags: [random, math]
 math: true
 ---
@@ -35,7 +35,7 @@ I'll now go through some possible solutions.
 By far the most common C++ solution I've seen follows this pattern:
 
 - Generate two random letters and three random digits using some random number generator.
-- Check whether the generated serial number exists in the `std::unordered_set` of previous numbers.
+- Check whether the generated serial number exists in the `std::unordered_set` of previously generated numbers.
 - If so, try again; if not, add the serial number to the set and return it.
 
 I have a feeling that coding interview questions have trained us to overuse hash tables, as they are usually part of the expected answer. However, in this case, I think the solution above is far from the best. The more serial numbers are generated, the slower it gets. At the limit, trying to generate the last remaining serial number might take a while, as you will try to stumble upon it randomly in a loop.
@@ -58,7 +58,7 @@ We could improve on the previous solution if we could find a way to generate a p
 
 ### Cyclic groups
 
-To be succinct, in group theory, a group is a set of elements under some binary operation. For example, the set of integers in $[0, 256)$ under addition modulo 256 forms a group, that I'll denote informally as $\mathbb{Z}\_{256}$.
+To be overly succinct, in group theory, a group is a set of elements under some binary operation with specific properties. For example, the set of integers in $[0, 256)$ under addition modulo 256 forms a group, that I'll denote informally as $\mathbb{Z}\_{256}$.
 
 A group is [cyclic](https://en.wikipedia.org/wiki/Cyclic_group) if it is possible to generate all the elements of the group from a single one, by applying the binary operation repeatedly. That element is called a generator of the group. As an obvious example, 1 would be a generator of $\mathbb{Z}\_{256}$, as adding 1 repeatedly will cycle through all the elements of the group. 2 would not be a generator, as adding 2 does not change the parity of a number, and thus it would generate the subset of either even or odd integers in $\mathbb{Z}\_{256}$.
 
@@ -86,7 +86,7 @@ It just so happens that the C++ Standard Library has exactly what we need: [`std
 
 ## The LCG solution
 
-A [linear congruential generator](https://en.wikipedia.org/wiki/Linear_congruential_generator) (LCG) uses an affine transformation instead of simple addition:
+A [linear congruential generator](https://en.wikipedia.org/wiki/Linear_congruential_generator) (LCG) uses an affine transformation instead of a simple addition:
 
 $$x_{i+1} \leftarrow (a x_i + c) \mod m$$
 
